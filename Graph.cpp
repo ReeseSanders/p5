@@ -76,10 +76,10 @@ void Graph::PostOrderHelper(int index){
         index++;
     }
     //std::cout << "Post Order: " << std::endl;
-    for (auto i : postOrder){
+    /*for (auto i : postOrder){
         //std::cout << "R" << i << "->";
     }
-    //std::cout << std::endl;
+    //std::cout << std::endl;*/
 }
 
 int Graph::PostOrder(int index){
@@ -138,7 +138,7 @@ void Graph::CreateStrong(){
 
     for (auto i : edges){
         //std::cout << "In forloop at edge:" << i.first << std::endl;
-        bool asd = ifVisit.at(i.first);
+        //bool asd = ifVisit.at(i.first);
         if (!ifVisit.at(i.first)){
             //std::cout << "Visited Nodes" << std::endl;
             for (auto j : ifVisit){
@@ -243,13 +243,13 @@ std::vector<std::set<int>> Graph::GetRuleSCC(){
             }
         }
     }
-    for (unsigned int i = 0; i < orderSets.size(); i++){
+    /*for (unsigned int i = 0; i < orderSets.size(); i++){
        // std::cout << i << " SCC is ";
         for (auto j : orderSets.at(i)){
             //std::cout << "R" << j << ",";
         }
         //std::cout << std::endl;
-    }
+    }*/
     return orderSets;
 }
 
@@ -266,9 +266,9 @@ void Graph::InvertPostOrder(){
         stapo.pop();
     }
     postOrder = newPost;
-    for (auto i : postOrder){
+    /*for (auto i : postOrder){
         //std::cout << i << std::endl;
-    }
+    }*/
 }
 
 void Graph::PrintSCC(std::set<int> scc) {
